@@ -5,42 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Integration AI with EBS Finance SCM Modules</title>
 
-  <!-- Google Scholar citation metatags -->
+  <!-- Google Scholar tags -->
   <meta name="citation_title" content="Integration AI with EBS Finance SCM Modules">
   <meta name="citation_author" content="Kesari Kumar Durbaka">
   <meta name="citation_publication_date" content="2025/10/30">
   <meta name="citation_pdf_url" content="https://kesaridk.github.io/Papers/Integration-AI-with-EBS-Finance-SCM-Modules/paper.pdf">
 
   <style>
-    :root { --pad: 14px; }
-    html, body { height: 100%; }
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    header { display: flex; gap: 12px; align-items: center; justify-content: space-between; padding: var(--pad); border-bottom: 1px solid #e8e8e8; }
-    h1 { font-size: 1rem; margin: 0; font-weight: 600; }
-    .actions a { text-decoration: none; padding: 8px 12px; border: 1px solid #111; border-radius: 8px; }
-    .viewer { height: calc(100vh - 56px); }
-    iframe { width: 100%; height: 100%; border: 0; }
-    .fallback { padding: var(--pad); }
+    :root {
+      --text:#0f172a; --muted:#475569; --card:#ffffff; --border:rgba(15,23,42,.08);
+      --accent:#2563eb; --ring:rgba(37,99,235,.15); --radius:16px;
+      --bg1:#ffffff; --bg2:#f8fafc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --text:#e5e7eb; --muted:#94a3b8; --card:#111827; --border:#1f2937; --bg1:#0b1220; --bg2:#0b1220; }
+      a { color:#93c5fd }
+    }
+    * { box-sizing:border-box }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:linear-gradient(180deg,var(--bg1),var(--bg2)) }
+    header { padding:28px 18px; border-bottom:1px solid var(--border) }
+    .container { max-width:960px; margin:0 auto; padding:0 12px }
+    h1 { margin:0 0 8px; font-size:1.7rem }
+    .meta { color:var(--muted); margin-bottom:16px }
+    .author a { color:var(--accent); text-decoration:none }
+    .buttons { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px }
+    .btn { display:inline-block; padding:10px 14px; border:1px solid var(--accent); border-radius:12px; text-decoration:none; font-weight:600; box-shadow:0 6px 16px var(--ring); }
+    .btn.primary { background:var(--accent); color:#fff }
+    .btn.secondary { background:transparent; color:var(--accent) }
+    main { padding:24px 18px 48px }
+    section { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:0 6px 24px rgba(2,6,23,.06) }
+    h2 { font-size:1.1rem; margin:0 0 10px }
+    p { margin:0 0 12px }
+    .toc { margin:0 0 8px; color:var(--muted) }
+    footer { padding:22px 18px; color:var(--muted) }
   </style>
 </head>
 <body>
   <header>
-    <h1>Integration AI with EBS Finance SCM Modules</h1>
-    <div class="actions">
-      <a href="paper.pdf" download>Download PDF</a>
+    <div class="container">
+      <h1>Integration AI with EBS Finance SCM Modules</h1>
+      <div class="meta">
+        <span class="author">Author: <a href="https://www.linkedin.com/in/kesarikumardurbaka" target="_blank" rel="noopener">Kesari Kumar Durbaka</a></span>
+      </div>
+      <div class="buttons">
+        <a class="btn primary" href="https://kesaridk.github.io/Papers/Integration-AI-with-EBS-Finance-SCM-Modules/paper.pdf">Download PDF</a>
+        <a class="btn secondary" href="..">Back to all papers</a>
+      </div>
     </div>
   </header>
 
-  <div class="viewer">
-    <!-- Inline PDF viewer -->
-    <iframe src="paper.pdf#view=FitH" loading="lazy"></iframe>
-  </div>
+  <main>
+    <div class="container">
+      <section>
+        <h2>Abstract</h2>
+        <p>This paper presents a practical architecture for adding targeted AI capabilities to Oracle E‑Business Suite Finance and Supply Chain modules without disrupting core processes. It covers decision support, forecasting signals, and knowledge retrieval with clear integration points (FBDI, Open Interface tables, seeded APIs, and event subscriptions), orchestration patterns, and controls for auditability and change management. A test plan and KPIs are included to measure impact on exception rates, processing latency, and month‑end effort.</p>
 
-  <div class="fallback">
-    <noscript>
-      JavaScript is disabled. <a href="paper.pdf">Open the PDF</a>.
-    </noscript>
-    If the PDF doesn't display in your browser, <a href="paper.pdf">open it directly</a>.
-  </div>
+        <h2>Contents</h2>
+        <p class="toc">Use these anchors as you add full HTML content later.</p>
+        <ul>
+          <li>1. Overview</li>
+          <li>2. Architecture &amp; Integration Points</li>
+          <li>3. Orchestration &amp; Controls</li>
+          <li>4. Testing &amp; KPIs</li>
+          <li>5. Deployment Notes</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small>© 2025 Kesari Kumar Durbaka</small>
+  </footer>
 </body>
 </html>
