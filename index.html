@@ -3,22 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Publications by Kesari Kumar Durbaka</title>
-  
+  <title>Publications – Kesari Kumar Durbaka</title>
+  <meta name="description" content="Publications and preprints by Kesari Kumar Durbaka on Oracle E‑Business Suite, AI integration, and enterprise tax automation.">
+  <link rel="canonical" href="https://kesaridk.github.io/Papers/">
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 860px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
-    h1 { font-size: 1.9rem; margin-bottom: 0.25rem; }
-    .meta { color: #444; margin-bottom: 1.25rem; }
-    a.button { display: inline-block; padding: 0.6rem 0.9rem; border: 1px solid #333; border-radius: 8px; text-decoration: none; }
+    :root {
+      --bg: #0f172a;
+      --fg: #0b1220;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --accent-2: #7c3aed;
+      --ring: rgba(37, 99, 235, 0.15);
+      --radius: 16px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --fg: #0b1220;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --card: #111827;
+        --ring: rgba(59, 130, 246, 0.25);
+      }
+      a { color: #93c5fd; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+      color: var(--text);
+    }
+    header.hero {
+      background: radial-gradient(80% 120% at 20% 0%, #dbeafe 0%, rgba(219,234,254,0) 60%),
+                  radial-gradient(80% 120% at 100% 0%, #ede9fe 0%, rgba(237,233,254,0) 60%),
+                  linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      padding: 48px 20px 36px;
+      border-bottom: 1px solid rgba(15,23,42,0.06);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 12px; }
+    .hero h1 { font-size: 1.75rem; margin: 0 0 8px; }
+    .hero p { margin: 0; color: var(--muted); }
+    .actions { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none; padding: 10px 14px;
+      border: 1px solid var(--accent); color: white; background: var(--accent);
+      border-radius: 12px; font-weight: 600; box-shadow: 0 6px 16px var(--ring);
+    }
+    .btn.secondary {
+      background: transparent; color: var(--accent);
+      border-color: var(--accent);
+    }
+    main { padding: 28px 20px 60px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(15,23,42,0.06);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 6px 24px rgba(2,6,23,0.06);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .card h2 { font-size: 1.1rem; margin: 0 0 10px; }
+    .card p { margin: 0 0 14px; color: var(--muted); }
+    .card .links { display: flex; gap: 10px; margin-top: auto; }
+    .pill {
+      display: inline-block; padding: 4px 10px; border-radius: 999px; background: #eef2ff; color: #3730a3; font-size: 12px; margin-bottom: 10px;
+    }
+    footer { padding: 26px 20px; border-top: 1px solid rgba(15,23,42,0.06); color: var(--muted); }
   </style>
-
 </head>
 <body>
-  <h1>Publications by Kesari Kumar Durbaka</h1>
-  <p>This site hosts implementation-focused preprints on modernizing Oracle E-Business Suite with AI-assisted services and enterprise tax integration. Each paper provides a reference architecture, concrete integration points, and a test and controls checklist so teams can implement changes with confidence and audit readiness. The focus is on low-risk patterns that improve exception handling, forecasting, and compliance in Finance and Supply Chain, using standard EBS interfaces and widely adopted tax solutions. Readers can use the included KPIs and sample test cases to evaluate impact and guide phased rollouts. New items will be added over time as modules and use cases expand.</p>
-  <ul>
-    <li><a href="Integration-AI-with-EBS-Finance-SCM-Modules/">Integration AI with EBS Finance SCM Modules</a></li>
-    <li><a href="Harnessing-AI-and-Vertex-Integration/">Harnessing AI and Vertex Integration</a></li>
-  </ul>
+  <header class="hero">
+    <div class="container">
+      <div class="pill">Publications</div>
+      <h1>Kesari Kumar Durbaka</h1>
+      <p>Oracle E‑Business Suite & Cloud ERP leadership • AI‑assisted finance & tax integration</p>
+      <div class="actions">
+        <!-- TODO: Replace the LinkedIn URL with your real profile -->
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn secondary" href="https://github.com/kesaridk" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <article class="card">
+        <div>
+          <h2>Integration AI with EBS Finance SCM Modules</h2>
+          <p>This paper presents a practical architecture for adding targeted AI capabilities to Oracle E‑Business Suite Finance and Supply Chain modules without disrupting core processes. It covers decision support, forecasting signals, and knowledge retrieval, with clear integration points (FBDI, OIs, APIs, events) and audit controls.</p>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://kesaridk.github.io/Papers/Integration-AI-with-EBS-Finance-SCM-Modules/">Read online</a>
+          <a class="btn secondary" href="https://kesaridk.github.io/Papers/Integration-AI-with-EBS-Finance-SCM-Modules/paper.pdf">Download PDF</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <h2>Harnessing AI and Vertex Integration</h2>
+          <p>End‑to‑end design for integrating Vertex tax determination with Oracle E‑Business Suite, augmented by AI to reduce exceptions and speed close, with deployment options, performance and resilience patterns, and an audit‑ready control framework.</p>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://kesaridk.github.io/Papers/Harnessing-AI-and-Vertex-Integration/">Read online</a>
+          <a class="btn secondary" href="https://kesaridk.github.io/Papers/Harnessing-AI-and-Vertex-Integration/paper.pdf">Download PDF</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small>Last updated October 30, 2025. • © Kesari Kumar Durbaka</small>
+  </footer>
 </body>
 </html>
